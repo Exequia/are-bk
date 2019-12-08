@@ -6,4 +6,6 @@ import com.are.back.models.Users;
 
 public interface IUsersRepo extends CrudRepository<Users, Integer>{
 
+	Users findByEmail(String email);
+
 }

@@ -24,9 +24,9 @@ class UsersTests {
 	void createNewUser() {
 		Users user = new Users();
 		user.setId(0);
-		user.setAlias("Fénix");
-		user.setEmail("real.estepa@gmail.com");
-		user.setPassword(encoder.encode("FnxPa$$"));
+		user.setAlias("fnx");
+		user.setEmail("aa@aa.aa");
+		user.setPassword(encoder.encode("pass"));
 		Users response = userRepo.save(user);
 
 		assertTrue(response.getAlias().equalsIgnoreCase(user.getAlias()));
