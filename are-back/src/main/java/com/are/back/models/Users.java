@@ -1,6 +1,5 @@
 package com.are.back.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -8,12 +7,10 @@ import javax.persistence.Id;
 public class Users {
 	@Id
 	private int id;
-	@Column(name="password", length = 50)
 	private String password;
-	@Column(name="email", length = 50)
-	private String name;
+	private String email;
+	private String alias;
 	
-	 
 	public int getId() {
 		return id;
 	}
@@ -27,10 +24,17 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getName() {
-		return name;
+	public String getEmail() {
+		return email;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+	public String getAlias() {
+		return alias;
+	}
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+	
 }

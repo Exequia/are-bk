@@ -11,7 +11,7 @@ import com.are.back.services.interfaces.IUsersService;
 
 @RestController
 //@GetMapping("/user")
-public class UserController {
+public class UsersController {
 
 	@Autowired
 	private IUsersService userService;
