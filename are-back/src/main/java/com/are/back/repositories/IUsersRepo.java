@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.are.back.models.Users;
 
-public interface IUserRepo extends CrudRepository<Users, Integer>{
+public interface IUsersRepo extends CrudRepository<Users, Integer>{
 
 }
