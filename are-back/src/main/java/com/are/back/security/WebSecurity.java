@@ -20,9 +20,14 @@ import com.are.back.services.implementations.UsersService;
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
 
+	
+//	  https://www.adictosaltrabajo.com/2019/03/07/securizando-un-api-rest-con-jwt-y-roles/
+//	  https://www.adictosaltrabajo.com/2017/09/25/securizar-un-api-rest-utilizando-json-web-tokens/
+//	  https://dev.to/keysh/spring-security-with-jwt-3j76
+
 	@Autowired
 	private UsersService userService;
-	
+
 	@Autowired
 	private BCryptPasswordEncoder encoder;
 
