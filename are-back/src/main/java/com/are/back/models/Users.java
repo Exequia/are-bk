@@ -1,15 +1,21 @@
 package com.are.back.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Users {
 	@Id
+    @GeneratedValue
 	private int id;
 	private String password;
 	private String email;
 	private String alias;
+	   @ManyToOne @JoinColumn(name="id", insertable = false, updatable = false)
+	private Roles role;
 	
 	public int getId() {
 		return id;
@@ -36,5 +42,10 @@ public class Users {
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
-	
+	public Roles getRole() {
+		return role;
+	}
+	public void setRole(Roles role) {
+		this.role = role;
+	}
 }

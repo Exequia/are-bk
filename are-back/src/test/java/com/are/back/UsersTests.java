@@ -23,10 +23,10 @@ class UsersTests {
 	@Test
 	void createNewUser() {
 		Users user = new Users();
-		user.setId(0);
 		user.setAlias("fnx");
 		user.setEmail("aa@aa.aa");
 		user.setPassword(encoder.encode("pass"));
+		user.setId_role(2);
 		Users response = userRepo.save(user);
 
 		assertTrue(response.getAlias().equalsIgnoreCase(user.getAlias()));
