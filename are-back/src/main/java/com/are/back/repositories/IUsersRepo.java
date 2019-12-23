@@ -2,10 +2,10 @@ package com.are.back.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.are.back.models.Users;
+import com.are.back.models.User;
 
-public interface IUsersRepo extends CrudRepository<Users, Integer>{
+public interface IUsersRepo extends CrudRepository<User, Integer>{
 
-	Users findByEmail(String email);
+	User findByEmail(String email);
 
 }

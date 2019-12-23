@@ -2,9 +2,11 @@ package com.are.back.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Roles {
+@Table(name = "roles")
+public class Role {
 
 	@Id
 	private int id;
