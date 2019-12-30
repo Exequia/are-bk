@@ -51,7 +51,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 				.setSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
 				.setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.TOKEN_EXPIRATION_TIME))
 				.signWith(SignatureAlgorithm.HS512, SecurityConstants.JWT_SECRET).compact();
-
+		
+		response.addHeader("Access-Control-Expose-Headers", SecurityConstants.HEADER_AUTHORIZACION_KEY);
 		response.addHeader(SecurityConstants.HEADER_AUTHORIZACION_KEY,
 				SecurityConstants.TOKEN_BEARER_PREFIX + " " + token);
 	}

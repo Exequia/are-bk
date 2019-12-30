@@ -14,8 +14,7 @@ public interface IUsersService extends UserDetailsService {
 	 * Get a User by email
 	 * @return
 	 */
-	User getByEmail(String email);
+	User findByEmail(String email);
 
 	List<GrantedAuthority> getUserRoles(int userId);
-
 }

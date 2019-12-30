@@ -21,7 +21,7 @@ public class UsersService implements IUsersService {
 	private IUsersRepo userRepo;
 
 	@Override
-	public User getByEmail(String email) {
+	public User findByEmail(String email) {
 		return this.userRepo.findByEmail(email);
 	}
 

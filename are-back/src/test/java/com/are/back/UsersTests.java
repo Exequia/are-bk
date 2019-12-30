@@ -24,7 +24,7 @@ class UsersTests {
 	@Test
 	void createNewUser() {
 		User user = new User();
-		user.setAlias("fnx");
+		user.setUsername("fnx");
 		user.setEmail("aa@aa.aa");
 		user.setPassword(encoder.encode("pass"));
 		
@@ -33,7 +33,7 @@ class UsersTests {
 		
 		User response = userRepo.save(user);
 
-		assertTrue(response.getAlias().equalsIgnoreCase(user.getAlias()));
+		assertTrue(response.getUsername().equalsIgnoreCase(user.getUsername()));
 		assertTrue(response.getEmail().equalsIgnoreCase(user.getEmail()));
 		assertTrue(response.getPassword().equalsIgnoreCase(user.getPassword()));
 		assertTrue(response.getRole().getId() == (user.getRole().getId()));
