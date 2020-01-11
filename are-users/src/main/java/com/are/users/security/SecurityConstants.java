@@ -2,7 +2,7 @@ package com.are.users.security;
 
 public final class SecurityConstants {
 
-	public static final String AUTH_LOGIN_URL = "/api/users/authenticate";
+	public static final String AUTH_LOGIN_URL = "/authenticate";
 
 	// Spring Security
 	public static final String HEADER_AUTHORIZACION_KEY = "Authorization";
